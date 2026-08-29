@@ -70,8 +70,3 @@ elif voter_id.lower() != "yes":
     print("Not eligible: voter ID not available.")
 else:
     print("Eligible to vote.")
-
-"""Leap Year condition"""
-
-year = int(input("Enter your age: "))
-
