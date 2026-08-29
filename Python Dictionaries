@@ -1,0 +1,253 @@
+# efine two numbers
+a = 10
+b = 3
+
+# Basic arithmetic operations
+print(a + b)   # Addition
+print(a - b)   # Subtraction
+print(a * b)   # Multiplication
+print(a / b)   # Division (float result)
+
+# Special arithmetic operations
+print(a // b)  # Floor division (quotient without decimals)
+print(a % b)   # Modulus (remainder)
+print(a ** b)  # Power (a raised to b)
+
+dishes =  ["chicken", "pasta", "tofu"]  ## square brackets
+dishes[0]
+
+premium_dishes = ['countrychicken', 'dragoneggs']
+dishes.append(premium_dishes)
+dishes
+
+dishes =  ["chicken", "pasta", "tofu"]  ## square brackets
+premium_dishes = ['countrychickn', 'dragoeggs']
+price = [200, 100, 150]
+
+hotelMenu.update({"chicken": 100})
+hotelMenu.update({"pasta": 123})
+hotelMenu
+hotelMenu["chicken"]
+
+restaurant_menu = {
+    "Shahi Paneer": 180,
+    "Paneer Tikka": 220,
+    "Paneer Tadka": 160,
+    "Paneer Gobi": 170,
+    "Dal Makhani": 150,
+    "Veg Biryani": 180,
+    "Butter Chicken": 280,
+    "Chicken Tikka": 260,
+    "Chicken Curry": 240,
+    "Chicken Biryani": 250,
+    "Fish Curry": 300,
+    "Mutton Rogan Josh": 350
+}
+restaurant_menu
+
+dish = input("Enter the name of the dish: ").strip().lower()
+
+if dish in restaurant_menu:
+    print(f"The price of {dish.title()} is ₹{restaurant_menu[dish]}")
+else:
+    print("Sorry, the dish is not available in the menu.")
+
+restaurant_menu = {
+    "Shahi Paneer": {"price": 180, "category": "Veg"},
+    "Paneer Tikka": {"price": 220, "category": "Veg"},
+    "Paneer Tadka": {"price": 160, "category": "Veg"},
+    "Paneer Gobi": {"price": 170, "category": "Veg"},
+    "Dal Makhani": {"price": 150, "category": "Veg"},
+    "Veg Biryani": {"price": 180, "category": "Veg"},
+    "Butter Chicken": {"price": 280, "category": "Non-Veg"},
+    "Chicken Tikka": {"price": 260, "category": "Non-Veg"},
+    "Chicken Curry": {"price": 240, "category": "Non-Veg"},
+    "Chicken Biryani": {"price": 250, "category": "Non-Veg"},
+    "Fish Curry": {"price": 300, "category": "Non-Veg"},
+    "Mutton Rogan Josh": {"price": 350, "category": "Non-Veg"}
+}
+
+# Get input from user
+food_type = input("Enter food type (Veg / Non-Veg): ").strip().lower()
+
+# Convert user input to the format used in dictionary
+if food_type == "veg":
+    category = "Veg"
+elif food_type == "non-veg":
+    category = "Non-Veg"
+else:
+    print("Invalid input. Please enter Veg or Non-Veg.")
+    exit()
+
+# Display matching dishes
+print(f"\nAvailable {category} dishes:")
+
+for dish, details in restaurant_menu.items():
+    if details["category"] == category:
+        print(f"{dish} - ₹{details['price']}")
+
+
+Set_B = {
+    "Chicken Tikka",
+    "Fish Fry",
+    "French Fries",
+    "Peanuts",
+    "Butter Chicken"
+}
+
+Set_A = {
+    "Chicken Tikka",
+    "Fish Fry",
+    "French Fries",
+    "Peanuts",
+    "Butter Chicken",
+    "Paneer Tikka",
+    "Veg Biryani",
+    "Dal Makhani",
+    "Chicken Biryani",
+    "Mutton Rogan Josh"
+}
+
+# Items available in restaurant but not in bar
+restaurant_only = Set_A - Set_B
+
+print("Available in Restaurant but NOT in Bar:")
+for item in sorted(restaurant_only):
+    print(item)
+
+Set_A.difference(Set_B)
+
+restaurant_menu = {
+    "Pasta": {
+        "price": 110,
+        "category": "veg",
+        "discount": 0.10
+    },
+    "Pizza": {
+        "price": 250,
+        "category": "veg",
+        "discount": 0.15
+    },
+    "Veg Burger": {
+        "price": 150,
+        "category": "veg",
+        "discount": 0.10
+    },
+    "French Fries": {
+        "price": 100,
+        "category": "veg",
+        "discount": 0.05
+    },
+    "Veg Sandwich": {
+        "price": 120,
+        "category": "veg",
+        "discount": 0.10
+    },
+    "Paneer Tikka": {
+        "price": 220,
+        "category": "veg",
+        "discount": 0.15
+    },
+    "Veg Biryani": {
+        "price": 180,
+        "category": "veg",
+        "discount": 0.10
+    },
+    "Dal Makhani": {
+        "price": 150,
+        "category": "veg",
+        "discount": 0.05
+    },
+    "Masala Dosa": {
+        "price": 100,
+        "category": "veg",
+        "discount": 0.10
+    },
+    "Chole Bhature": {
+        "price": 140,
+        "category": "veg",
+        "discount": 0.05
+    },
+    "Veg Noodles": {
+        "price": 130,
+        "category": "veg",
+        "discount": 0.10
+    },
+    "Paneer Butter Masala": {
+        "price": 200,
+        "category": "veg",
+        "discount": 0.15
+    },
+    "Gobi Manchurian": {
+        "price": 160,
+        "category": "veg",
+        "discount": 0.10
+    },
+    "Veg Fried Rice": {
+        "price": 140,
+        "category": "veg",
+        "discount": 0.05
+    },
+    "Idli Sambar": {
+        "price": 80,
+        "category": "veg",
+        "discount": 0.05
+    },
+    "Butter Chicken": {
+        "price": 280,
+        "category": "non-veg",
+        "discount": 0.10
+    },
+    "Chicken Biryani": {
+        "price": 250,
+        "category": "non-veg",
+        "discount": 0.15
+    },
+    "Chicken Tikka": {
+        "price": 260,
+        "category": "non-veg",
+        "discount": 0.10
+    },
+    "Chicken Curry": {
+        "price": 240,
+        "category": "non-veg",
+        "discount": 0.05
+    },
+    "Chicken Burger": {
+        "price": 180,
+        "category": "non-veg",
+        "discount": 0.10
+    },
+    "Chicken Noodles": {
+        "price": 170,
+        "category": "non-veg",
+        "discount": 0.05
+    },
+    "Mutton Biryani": {
+        "price": 320,
+        "category": "non-veg",
+        "discount": 0.15
+    },
+    "Mutton Curry": {
+        "price": 300,
+        "category": "non-veg",
+        "discount": 0.10
+    },
+    "Fish Curry": {
+        "price": 280,
+        "category": "non-veg",
+        "discount": 0.05
+    },
+    "Fish Fry": {
+        "price": 250,
+        "category": "non-veg",
+        "discount": 0.10
+    },
+    "Prawn Curry": {
+        "price": 350,
+        "category": "non-veg",
+        "discount": 0.15
+    }
+}
+
+restaurant_menu
